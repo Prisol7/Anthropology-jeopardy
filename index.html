@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body> 
+
+    <nav class="w-full bg-[rgb(255,236,251)] py-4 shadow-md mb-10">
+        <div class="container mx-auto flex items-center justify-center">
+          <!-- Logo -->
+          <img src="logo.png" alt="Logo" class="w-20 h-20 mr-3">
+          <!-- Title -->
+          <h1 class="text-black text-2xl font-bold">Anthropology Club Jeopardy</h1>
+        </div>
+    </nav>
+
+
+    <div class="h-[700px] container mx-auto">
+        <!-- Jeopardy Board -->
+        <div class="grid grid-cols-4 gap-4 max-w-6xl mx-auto h-full">
+          <!-- First row - Category Titles -->
+          <div class="bg-yellow-500 text-black text-center flex justify-center p-4 font-bold text-lg">Category 1</div>
+          <div class="bg-yellow-500 text-black text-center justify-center p-4 font-bold text-lg">Category 2</div>
+          <div class="bg-yellow-500 text-black text-center justify-center p-4 font-bold text-lg">Category 3</div>
+          <div class="bg-yellow-500 text-black text-center justify-center p-4 font-bold text-lg">Category 4</div>
+          
+          <!-- Rows of Scores (100 - 600) -->
+          <div id="box-1a" class="box bg-blue-500 text-white text-center justify-center p-8 font-bold text-2xl hover:bg-blue-600 cursor-pointer">100</div>
+          <div id="box-2a" class="box bg-blue-500 text-white text-center justify-center p-8 font-bold text-2xl hover:bg-blue-600 cursor-pointer">100</div>
+          <div id="box-3a" class="box bg-blue-500 text-white text-center justify-center p-8 font-bold text-2xl hover:bg-blue-600 cursor-pointer">100</div>
+          <div id="box-4a" class="box bg-blue-500 text-white text-center justify-center p-8 font-bold text-2xl hover:bg-blue-600 cursor-pointer">100</div>
+    
+          <div id="box-1b" class="box bg-blue-500 text-white text-center justify-center p-8 font-bold text-2xl hover:bg-blue-600 cursor-pointer">200</div>
+          <div id="box-2b" class="box bg-blue-500 text-white text-center justify-center p-8 font-bold text-2xl hover:bg-blue-600 cursor-pointer">200</div>
+          <div id="box-3b" class="box bg-blue-500 text-white text-center justify-center p-8 font-bold text-2xl hover:bg-blue-600 cursor-pointer">200</div>
+          <div id="box-4b" class="box bg-blue-500 text-white text-center justify-center p-8 font-bold text-2xl hover:bg-blue-600 cursor-pointer">200</div>
+    
+          <div id="box-1c" class="box bg-blue-500 text-white text-center justify-center p-8 font-bold text-2xl hover:bg-blue-600 cursor-pointer">300</div>
+          <div id="box-2c" class="box bg-blue-500 text-white text-center justify-center p-8 font-bold text-2xl hover:bg-blue-600 cursor-pointer">300</div>
+          <div id="box-3c" class="box bg-blue-500 text-white text-center justify-center p-8 font-bold text-2xl hover:bg-blue-600 cursor-pointer">300</div>
+          <div id="box-4c" class="box bg-blue-500 text-white text-center justify-center p-8 font-bold text-2xl hover:bg-blue-600 cursor-pointer">300</div>
+    
+          <div id="box-1d" class="box bg-blue-500 text-white text-center justify-center p-8 font-bold text-2xl hover:bg-blue-600 cursor-pointer">400</div>
+          <div id="box-2d" class="box bg-blue-500 text-white text-center justify-center p-8 font-bold text-2xl hover:bg-blue-600 cursor-pointer">400</div>
+          <div id="box-3d" class="box bg-blue-500 text-white text-center justify-center p-8 font-bold text-2xl hover:bg-blue-600 cursor-pointer">400</div>
+          <div id="box-4d" class="box bg-blue-500 text-white text-center justify-center p-8 font-bold text-2xl hover:bg-blue-600 cursor-pointer">400</div>
+    
+          <div id="box-1e" class="box bg-blue-500 text-white text-center justify-center p-8 font-bold text-2xl hover:bg-blue-600 cursor-pointer">500</div>
+          <div id="box-2e" class="box bg-blue-500 text-white text-center justify-center p-8 font-bold text-2xl hover:bg-blue-600 cursor-pointer">500</div>
+          <div id="box-3e" class="box bg-blue-500 text-white text-center justify-center p-8 font-bold text-2xl hover:bg-blue-600 cursor-pointer">500</div>
+          <div id="box-4e" class="box bg-blue-500 text-white text-center justify-center p-8 font-bold text-2xl hover:bg-blue-600 cursor-pointer">500</div>
+        </div>
+    </div>
+
+    <div class="popup-overlay" id="popup-overlay"></div>
+    <div class="popup-card" id="popup-card">
+        <div id="popup-content"></div>
+        <button id="close-popup" class="mt-4 px-4 py-2 bg-blue-500 text-white rounded">Close</button>
+    </div>
+    
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+ 
