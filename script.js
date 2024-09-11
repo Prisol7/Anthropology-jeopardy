@@ -31,12 +31,16 @@ document.querySelectorAll('.box').forEach(box => {
     });
 });
 
-document.getElementById('close-popup').addEventListener('click', function() {
-    document.getElementById('popup-overlay').style.display = 'none';
-    document.getElementById('popup-card').style.display = 'none';
-});
-
 document.getElementById('popup-overlay').addEventListener('click', function() {
     document.getElementById('popup-overlay').style.display = 'none';
     document.getElementById('popup-card').style.display = 'none';
 });
+document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') {
+      // Close the popup here
+      const popupOverlay = document.getElementById('popup-overlay');
+      popupOverlay.style.display = 'none';
+      const popup = document.getElementById('popup-card');
+      popup.style.display = 'none';
+    }
+  });
