@@ -37,9 +37,9 @@ const questionsV2 = {
         answers: ['Code-switching', 'dialect', 'pidgin', 'creole']
     },
     'box-4a': {
-        question: 'This Archeologist fought nazis in the 1940s',
-        correctAnswer: 'Indiana Jones',
-        answers: ['Indiana Jones', 'Howard Carter', '', '']
+        question: 'Discovered in the 1920s in the tomb of a Chinese emperor, this famous collection of statues represents an army created to protect the emperor in the afterlife.',
+        correctAnswer: 'Terracotta Warriors',
+        answers: ['Terracotta Warriors', 'The Roman Legion', 'Samurai', 'British Redcoats']
     },
     'box-1b': {
         question: 'what is a common term used to describe a kinship system in which individuals trace their ancestry through both maternal and paternal lines?',
@@ -47,24 +47,24 @@ const questionsV2 = {
         answers: ['Bilateral descent', 'Unilineal descent', 'Matrilineal descent', 'Patrilineal descent']
     },
     'box-2b': {
-        question: 'Which of the following is considered one of the earliest known hominins',
-        correctAnswer: 'Australopithecus afarensis',
-        answers: ['Homo erectus', ' Homo sapiens', 'Neanderthals', 'Australopithecus afarensis']
+        question: 'What species was the famous skeleton Lucy',
+        correctAnswer: 'Australopithecus africanus',
+        answers: ['Australopithecus africanus', 'Homo sapiens', 'Homo floresiensis', 'Neanderthal']
     },
     'box-3b': {
         question: 'The term for the smallest unit of sound',
         correctAnswer: 'phoneme',
-        answers: ['Correct Answer 7', 'Incorrect Answer 1', 'Incorrect Answer 2', 'Incorrect Answer 3']
+        answers: ['syllable', 'phoneme', 'allophone', 'Morpheme']
     },
     'box-4b': {
         question: 'mapping technology to document social patterns based on geological location',
         correctAnswer: 'Geographic Imaging System',
-        answers: ['Geographic Imaging System', 'Incorrect Answer 1', 'Incorrect Answer 2', 'Incorrect Answer 3']
+        answers: ['Geographic Imaging System', 'Global Positioning System', 'Gravity Survey', 'Seismic Reflection Surveying', ]
     },
     'box-1c': {
-        question: 'Question for 300 in Category 1',
-        correctAnswer: 'Correct Answer 9',
-        answers: ['Correct Answer 9', 'Incorrect Answer 1', 'Incorrect Answer 2', 'Incorrect Answer 3']
+        question: 'This field of study focuses on the cultural adaptations of a people to the enviroment they live in',
+        correctAnswer: 'Cultural Ecology',
+        answers: ['Cultural Ecology', 'Paleontology', 'Geology', 'Environmental science']
     },
     'box-2c': {
         question: 'Which of the following behaviors is commonly observed in primates and is crucial for social bonding',
@@ -73,13 +73,13 @@ const questionsV2 = {
     },
     'box-3c': {
         question: 'This North American language uses a cyclical explanation of time as opposed to linear',
-        correctAnswer: 'hopi language',
-        answers: ['hopi language', 'Incorrect Answer 1', 'Incorrect Answer 2', 'Incorrect Answer 3']
+        correctAnswer: 'Hopi language',
+        answers: ['Hopi language', 'Cree', 'Yanomaman', 'Yupik']
     },
     'box-4c': {
-        question: 'Question for 300 in Category 4',
-        correctAnswer: 'Correct Answer 12',
-        answers: ['Correct Answer 12', 'Incorrect Answer 1', 'Incorrect Answer 2', 'Incorrect Answer 3']
+        question: 'The technique of measuring the half-life decay of this element in order to determine the age of any organic material between 500-60,000 years old.',
+        correctAnswer: 'Carbon dating',
+        answers: ['Carbon dating', 'Radiometric dating', 'Cosmogenic surface exposure dating', 'Dendrochronology']
     },
     'box-1d': {
         question: 'a.png',
@@ -87,19 +87,19 @@ const questionsV2 = {
         answers: ['Mayan', 'Olmec', 'Babylonian', 'Egyptian']
     },
     'box-2d': {
-        question: 'What species was the famous skeleton Lucy',
-        correctAnswer: 'Australopithecus africanus',
-        answers: ['Australopithecus africanus', 'Homo sapiens', 'Homo floresiensis', 'Neanderthal']
+        question: 'Which of the following is considered one of the earliest known hominins',
+        correctAnswer: 'Australopithecus afarensis',
+        answers: ['Homo erectus', ' Homo sapiens', 'Neanderthals', 'Australopithecus afarensis']
     },
     'box-3d': {
         question: 'Phonations occurs in this part of the body',
-        correctAnswer: 'The larynx/vocal folds',
-        answers: ['The larynx/vocal folds', 'Incorrect Answer 1', 'Incorrect Answer 2', 'Incorrect Answer 3']
+        correctAnswer: 'the larynx/vocal folds',
+        answers: ['the larynx/vocal folds', 'lungs', 'trachea', 'nasal cavity']
     },
     'box-4d': {
         question: 'Archaeologist re-create tools and building techniques to better understand past ways of life',
-        correctAnswer: 'experimental archaeology',
-        answers: ['experimental archaeology', 'Incorrect Answer 1', 'Incorrect Answer 2', 'Incorrect Answer 3']
+        correctAnswer: 'Experimental Archaeology',
+        answers: ['Experimental Archaeology', 'Ethnoarchaeology', 'Egyptology', 'Historical Archaeology']
     },
     'box-1e': {
         question: 'This high demand religion believes that humans were created in a laboratory and planted on earth.',
@@ -114,12 +114,12 @@ const questionsV2 = {
     'box-3e': {
         question: 'this NAE phoneme is a glottal consonant',
         correctAnswer: 'h',
-        answers: ['h', 'Incorrect Answer 1', 'Incorrect Answer 2', 'Incorrect Answer 3']
+        answers: ['h', 'i', 't', 'k']
     },
     'box-4e': {
-        question: 'Question for 500 in Category 4',
-        correctAnswer: 'Correct Answer 20',
-        answers: ['Correct Answer 20', 'Incorrect Answer 1', 'Incorrect Answer 2', 'Incorrect Answer 3']
+        question: 'These triangular stones made by the indigenous populations of the carribean served as idols to their dieties that they believed worked in threes.',
+        correctAnswer: 'zemis',
+        answers: ['zemis', 'totem', 'moai', 'colossal heads']
     },
 };
 
@@ -158,7 +158,7 @@ document.querySelectorAll('.box').forEach(box => {
                 choice = this.textContent
                 console.log(choice)
                 if (answerChecker(choice, correctAnswer)) {
-                    box.style.backgroundColor = 'green';
+                    box.style.backgroundColor = '#16a34a';
                     document.getElementById('popup-overlay').style.display = 'none';
                     document.getElementById('popup-card').style.display = 'none';
                 }
