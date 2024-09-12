@@ -169,6 +169,11 @@ document.querySelectorAll('.box').forEach(box => {
             })
         })
     });
+
+    box.addEventListener('contextmenu', function() {
+        event.preventDefault();
+        box.style.backgroundColor = ''
+    })
 });
 
 document.getElementById('popup-overlay').addEventListener('click', function() {
@@ -211,3 +216,10 @@ function answerChecker(choice, answer) {
         return false
     }
 }
+
+const bel = document.querySelector('.box');
+
+bel.addEventListener('contextmenu', function(event) {
+        event.preventDefault(); // Prevent the default right-click menu
+        box.style.backgroundColor = 'red'; // Change color to red
+});
